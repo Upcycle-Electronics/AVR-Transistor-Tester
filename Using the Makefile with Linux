@@ -1,0 +1,86 @@
+2.10.1
+Using the Makefile with Linux
+
+ With Debian based Linux versions you can install software packages by using a package manager program such as Synaptic (GUI) or dpkg (command line). If you are new to Linux or are not familiar with the command line interface, you should probably use Synaptic. You can download it by searching for Synaptic in the Software Center included in your Linux distribution.
+ 
+  You also need to install a software package called “Subversion.” Subversion is used to download files directly from a SVN archive. Once Subversion is installed you can open a terminal and copy and paste the command:
+svn checkout svn://www.mikrocontroller.net/transistortester
+to download the complete archive. Of course, you can also download subdirectories of the archive by typing out their extended web address.
+
+  For programming your microcontroller you will be using a Makefile. A Makefile is the file used to compile code for your device and the options you chose. Makefiles are found in the SVN archive under:
+ transistortester>Software>Trunk>(choose a folder that matches your hardware)>makefile
+Note: Before going any further with a file, be sure to check the ReadMe text associated with the folder.
+
+If this is your first time programming an AVR:
+You must install the following software tool chain: make, binutils-avr, avrdude, avr-libc and gcc-avr. These are all open source freeware projects. Together they form the toolchain you need. Search for each of them with the Synaptic Program Manager if you are not proficient with command line installation.
+
+Enable Hardware Communication:
+ After all of the toolchain programs are installed you must enable hardware communication for the toolchain. First, plug in your ISP programmer into the USB port of your computer. Next, open a command line terminal. You need some information about your programmer. The command used to list all USB devices attached to your computer is "lsusb". Type lsusb and hit [enter], the results should look something like this:
+
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 003: ID 046d:c050 Logitech, Inc. RX 250 Optical Mouse
+Bus 002 Device 058: ID 03eb:2104 Atmel Corp. AVR ISP mkII
+Bus 002 Device 059: ID 2341:0042 Arduino SA Mega 2560 R3 (CDC ACM)
+Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+
+ Notice on the third line, "Device 58" is detected. This is an AVR ISP mkII programmer (DIAMEX ALL-AVR). The ID 03eb is a vendor
+ID, and 2104 is a product ID. Both ID’s are needed in a root file saved on your computer, so copy them or write them down now.
+
+If you are familiar with terminal commands:
+Navigate to the directory /etc/udev/rules.d and create the file 90-atmel.rules
+ /etc/udev/rules.d/90-atmel.rules
+This file needs one line of code.  If, for example, you were creating the file for the USB device listed above the
+90-atmel.rules file should include this:
+SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2104", MODE="0660", GROUP="plugdev"
+
+If you are not familiar with terminal commands:
+ Open Leaf Pad under Accessories (or any simple text note pad). Now copy and paste the following text to a blank new
+document (replace the zeros with your 2 ID's/leave every other character and space here):
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0000", ATTRS{idProduct}=="0000", MODE="0660", GROUP="plugdev"
+
+This code must be on one line. Next, save the file as 90-atmel.rules . Save it to the desktop. Your about to move it anyways.
+Now we need the dreaded Terminal, but let's do this as easy as possible. Go to your File Manager where you access your
+folders on your computer. Find the folder for your desktop. Right click it and select "Open in Terminal." Now simply copy
+and paste the following:
+sudo mv 90-atmel.rules /etc/udev/rules.d
+If you want to know what your doing here, this line breaks down like this:
+sudo=Super User Access_mv= Move File_(File Named=)90-atmel.rules_(to the folder location at=) /=root directory >etc>udev>rules.d
+Overall, this file you just created permits members of the group "plugdev" to access the USB device with the ID's you added.
+
+
+USB to Serial Cables/Programmers:
+ If you look at the list of examples given above for the "lsusb" command, Device 59 is another type of supported programming connection. This is a USB to serial converter. Access to this type of hardware is structured a little bit differently. Access to the serial device is done by creating the file: ”/dev/ttyACM0” for members of the group ”dialout” or the following line of code (with your vendor/product ID instead of zeros):
+SUBSYSTEM=="USB", ATTRS{idVendor}=="0000", ATTRS{idProduct}=="0000", MODE="0660", GROUP="dialout"
+
+User Identification Mermbership:
+ Your user identification (aka your actual login user name on your computer) should be a member of the group plugdev and also a member
+of the group dialout. The command used to add your user ID as a member is:
+usermod -a -G dialout,plugdev $USER
+Alternativly this is an exact copy and paste of the command as used by another person, and shown as a working example:
+ jake@jake-HP-Compaq-6720s:~$ sudo usermod -a -G dialout,plugdev jake
+
+Basic Terminal Navigation:
+ After this is complete, your user membership to both groups should be established. Now the program avrdude should have permission to access
+both devices. If you wish to perform the simplest type of programming and compiling, use your terminal with AVRdude. In a terminal window you must first change the directory with the command “cd” to a proper subdirectory of the SVN archive you downloaded with Subversion earlier. You can use the command "ls" to see a list of files from your current dirrectory.
+For example:
+jake@jake-HP-Compaq-6720s:~$ cd Desktop/tt/transistortester/Software/trunk
+jake@jake-HP-Compaq-6720s:~/Desktop/tt/transistortester/Software/trunk$ ls
+jake@jake-HP-Compaq-6720s:~/Desktop/tt/transistortester/Software/trunk$ cd mega328
+jake@jake-HP-Compaq-6720s:~/Desktop/tt/transistortester/Software/trunk/mega328$
+Alternatively, you can navigate to the files you want to use in the File Manager graphical interface, right click the directory/folder you want to open in a terminal, and select "open in terminal".
+
+Altering Makefile Options
+You can change options of the Makefile with any simple text editor like Leaf Pad.
+Compiling the Source Code
+After you have saved your changes you must compile the source code. In a terminal window, be sure you have navigated to the proper subdirectory. The next step is to simply type the command “make”.
+Example:
+jake@jake-HP-Compaq-6720s:~/Desktop/tt/transistortester/Software/trunk/mega328$ make
+Uploading the Source Code to Your MCU
+Now you should have the compiled code. The last step, assuming you have the ISP programmer configured properly in the Makefile, is to use the command “make upload”. This command should load the program through the ISP interface to the ATmega microcontroller.
+Example:
+jake@jake-HP-Compaq-6720s:~/Desktop/tt/transistortester/Software/trunk/mega328$ make upload
+
+
+Fuses
+The “fuses” of the ATmega must also be set correctly once. You can achieve this with the command “make fuses” or “make fuses-crystal”. The
+AVRdude usually reports an error when setting the extended fuse efuse. The problem is due to how AVRdude reads unused fuse bits. The fuse is specified as ”1” for the ATmega, but AVRdude masks the unused bits. It expects a ”0” for all unused bits. Normally the efuse should be set to 0xfc, but AVRdude reads back 0x04 with the mask. You can correct AVRdude in the file avrdude.conf to fix the issue or you can set the efuse to 0x04. The value for all efuses can be set with the identifier EFUSE VAL at the beginning of file setup.mk in the trunk directory. Even if you see this error, the fuses are probably set correctly.
