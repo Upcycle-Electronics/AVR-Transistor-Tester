@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TFT-LCD-1.8-ST7735
+D Generic connector, single row, 01x14
+K connector
+F ~
+$ENDCMP
+#
+#End Doc Library

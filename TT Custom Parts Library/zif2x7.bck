@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ZIF2x7
+D Connector, double row, 02x07, pin header
+K connector
+$ENDCMP
+#
+#End Doc Library

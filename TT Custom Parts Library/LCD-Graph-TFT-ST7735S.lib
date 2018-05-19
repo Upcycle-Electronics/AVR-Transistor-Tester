@@ -1,0 +1,41 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# 1.44"TFT-LCD-Module-ST7735S
+#
+DEF 1.44"TFT-LCD-Module-ST7735S J 0 40 Y Y 1 F N
+F0 "J" -100 700 50 H V C CNN
+F1 "1.44\"TFT-LCD-Module-ST7735S" -100 -800 50 H V C CNB
+F2 "" -600 50 50 H I C CNN
+F3 "" -600 50 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 -50 -600 39 0 0 0 "''''1.44' SPI 128*128 V1.1''''" Normal 0 C C
+T 0 0 200 59 0 0 0 "1.44''" Normal 0 C C
+T 0 0 100 59 0 0 0 128x128pix Normal 0 C C
+T 0 0 -200 59 0 0 0 3.3v Normal 0 C C
+T 0 -150 550 39 0 0 0 BREAKOUT~MODULE~HEADER Normal 0 C C
+T 0 0 350 118 0 0 0 ST7735S Normal 1 C C
+T 0 0 -100 59 0 0 0 TFT~Color Normal 0 C C
+T 0 0 0 59 0 0 0 VA~27x28mm Normal 0 C C
+S -650 600 500 -650 1 1 10 N
+S -400 500 450 -550 1 1 10 N
+X LED 1 -800 350 150 R 50 50 1 1 P
+X SCLK 2 -800 250 150 R 50 50 1 1 P
+X SDA 3 -800 150 150 R 50 50 1 1 P
+X AO 4 -800 50 150 R 50 50 1 1 P
+X RST 5 -800 -50 150 R 50 50 1 1 P
+X CS 6 -800 -150 150 R 50 50 1 1 P
+X GND 7 -800 -250 150 R 50 50 1 1 P
+X VCC 8 -800 -350 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
