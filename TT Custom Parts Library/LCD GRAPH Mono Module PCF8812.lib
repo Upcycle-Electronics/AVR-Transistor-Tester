@@ -1,0 +1,41 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LCD-MOD-PCF8812
+#
+DEF LCD-MOD-PCF8812 LCD-M 0 40 N Y 1 F N
+F0 "LCD-M" 50 650 50 H V C CNB
+F1 "LCD-MOD-PCF8812" 100 -600 50 H V C CNB
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 250 -400 39 0 0 0 *K-Firmware~Only Normal 0 C C
+T 0 250 100 39 0 0 0 102x65pix Normal 0 C C
+T 0 250 -200 39 0 0 0 3.3v Normal 0 C C
+T 0 200 500 39 0 0 0 Generic~Nokia~Breakout~Module Normal 0 C C
+T 0 250 -100 39 0 0 0 Graph~Mono Normal 0 C C
+T 0 250 200 39 0 0 0 LCD~Model:~LPH7779 Normal 0 C C
+T 0 250 350 118 0 0 0 PCF8812 Normal 1 C C
+T 0 250 0 39 0 0 0 VA~22x30mm Normal 0 C C
+S -150 450 650 -450 0 0 10 f
+S -400 550 700 -500 1 1 10 N
+X RST 1 -550 350 150 R 50 50 1 1 P
+X D/C 2 -550 250 150 R 50 50 1 1 P
+X SCLK 3 -550 150 150 R 50 50 1 1 P
+X MOSI 4 -550 50 150 R 50 50 1 1 P
+X LED+ 5 -550 -50 150 R 50 50 1 1 P
+X VCC 6 -550 -150 150 R 50 50 1 1 P
+X SS 7 -550 -250 150 R 50 50 1 1 P
+X GND 8 -550 -350 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

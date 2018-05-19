@@ -1,0 +1,62 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LCD-MOD-ER-TFTM032-3
+#
+DEF LCD-MOD-ER-TFTM032-3 LCD-M 0 40 Y Y 1 F N
+F0 "LCD-M" 0 1350 50 H V C CNN
+F1 "LCD-MOD-ER-TFTM032-3" -150 -1600 50 H V C CNB
+F2 "" -50 100 50 H I C CNN
+F3 "" -50 100 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 250 -950 59 0 0 0 *M~Firmware Normal 0 C C
+T 0 250 350 79 0 0 0 240x320pix Normal 0 C C
+T 0 250 500 79 0 0 0 "3.2''" Normal 0 C C
+T 0 250 -100 79 0 0 0 3.3v Normal 0 C C
+T 0 250 -350 79 0 0 0 4~Wire~Serial Normal 1 C C
+T 0 -100 1150 39 0 0 0 40~Pin~Header~Breakout~Module~Serial~Configuration Normal 0 C C
+T 0 -750 150 39 0 0 0 4w~Serial Normal 0 C C
+T 0 250 1000 47 0 0 0 East~Rising Normal 1 C C
+T 0 250 750 197 0 0 0 ILI9341 Normal 1 C C
+T 0 -700 100 39 0 0 0 Interface~Config Normal 0 C C
+T 0 200 -1100 39 0 0 0 MPN:~ER-TFTM032-3 Normal 0 C C
+T 0 -650 -550 39 0 0 0 Resistive~Touch Normal 0 C C
+T 0 250 50 79 0 0 0 TFT~Color Normal 0 C C
+T 0 250 200 79 0 0 0 VA~49x65mm Normal 0 C C
+T 0 250 -700 59 0 0 0 w/Resistive~Touch~Panel Normal 0 C C
+T 0 -700 -450 47 0 0 0 XPT2046 Normal 1 C C
+T 0 250 -800 59 0 0 0 XPT2046 Normal 0 C C
+S -950 200 -450 -350 0 0 10 N
+S -900 -400 -400 -1100 0 0 10 f
+S -350 -1050 850 1100 0 0 10 f
+S -950 1200 900 -1150 1 1 10 N
+X GND 1 -1100 350 150 R 50 50 1 1 P
+X VCC 2 -1100 450 150 R 50 50 1 1 P
+X RTP_SS 30 -1100 -1050 197 R 39 39 1 1 P
+X GND 40 -1100 250 150 R 50 50 1 1 P
+X RST 21 -1100 750 150 R 50 50 1 1 P
+X RTP_PEN 31 -1100 -950 197 R 39 39 1 1 P
+X IM0_L 41 -1100 0 150 R 50 50 1 1 P
+X RTP_MISO 32 -1100 -850 197 R 39 39 1 1 P
+X IM1_H 42 -1100 -100 150 R 50 50 1 1 P
+X SS 23 -1100 650 150 R 50 50 1 1 P
+X RTP_SCLK 33 -1100 -750 197 R 39 39 1 1 P
+X IM2_H 43 -1100 -200 150 R 50 50 1 1 P
+X SCLK 24 -1100 950 150 R 50 50 1 1 P
+X RTP_MOSI 34 -1100 -650 197 R 39 39 1 1 P
+X IM3_L 44 -1100 -300 150 R 50 50 1 1 P
+X D/C 25 -1100 850 150 R 50 50 1 1 P
+X MOSI 27 -1100 1050 150 R 50 50 1 1 P
+X LED(on/off) 29 -1100 550 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,44 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LCD-ST7565
+#
+DEF LCD-ST7565 LCD 0 40 N Y 1 F N
+F0 "LCD" 300 900 50 H V C CNB
+F1 "LCD-ST7565" 250 -850 50 H V C CNB
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 600 200 59 0 0 0 "1.4-2.6''" Normal 0 C C
+T 0 600 50 59 0 0 0 128X64pix Normal 0 C C
+T 0 600 -550 59 0 0 0 3.3v Normal 0 C C
+T 0 600 -400 59 0 0 0 Graph~Mono Normal 0 C C
+T 0 450 600 39 0 0 0 Pin~Names~for~Reference~Only Normal 0 C C
+T 0 500 -700 39 0 0 0 See~Datasheet~for~Serial~Details Normal 0 C C
+T 0 600 400 118 0 0 0 ST7565 Normal 1 C C
+T 0 600 -100 51 0 0 0 "VA 1.4'' 36x20mm" Normal 0 C C
+T 0 600 -250 51 0 0 0 "VA 2.6'' 65x37mm" Normal 0 C C
+S -50 650 1050 -750 1 1 10 N
+S 200 550 1000 -650 1 1 10 f
+X CS1 1 -200 400 150 R 50 50 1 1 P
+X RST 2 -200 300 150 R 50 50 1 1 P
+X A0 3 -200 200 150 R 50 50 1 1 P
+X SCL 4 -200 100 150 R 50 50 1 1 P
+X SDA 5 -200 0 150 R 50 50 1 1 P
+X CS2 6 -200 -100 150 R 50 50 1 1 P
+X P/S 7 -200 -200 150 R 50 50 1 1 P
+X LED+ 8 -200 -500 150 R 50 50 1 1 P
+X VDD 9 -200 -300 150 R 50 50 1 1 P
+X VSS 10 -200 -400 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

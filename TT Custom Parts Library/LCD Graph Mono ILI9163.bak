@@ -1,0 +1,42 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LCD-TFT-ILI9163
+#
+DEF LCD-TFT-ILI9163 LCD-M 0 40 Y Y 1 F N
+F0 "LCD-M" 0 750 50 H V C CNB
+F1 "LCD-TFT-ILI9163" 0 -700 50 H V C CNB
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 -50 -500 39 0 0 0 "''''1.44' SPI 128*128 V1.1''''" Normal 0 C C
+T 0 50 150 47 0 0 0 "1.4''" Normal 0 C C
+T 0 50 50 47 0 0 0 128X128pix Normal 0 C C
+T 0 50 -250 47 0 0 0 3.3v Normal 0 C C
+T 0 50 -350 47 0 0 0 4w~Serial Normal 1 C C
+T 0 50 300 98 0 0 0 ILI9163 Normal 1 C C
+T 0 50 -150 47 0 0 0 TFT~Color Normal 0 C C
+T 0 -50 550 39 0 0 0 Unbranded~Red~BO~Module~ Normal 0 C C
+T 0 50 -50 47 0 0 0 VA~27x28mm Normal 0 C C
+S -500 600 400 -550 1 1 10 N
+S -250 500 350 -450 1 1 10 f
+X LED+ 1 -650 -150 150 R 50 50 1 1 P
+X SCLK 2 -650 150 150 R 50 50 1 1 P
+X MOSI 3 -650 50 150 R 50 50 1 1 P
+X D/C 4 -650 250 150 R 50 50 1 1 P
+X RST 5 -650 350 150 R 50 50 1 1 P
+X SS 6 -650 -50 150 R 50 50 1 1 P
+X GND 7 -650 -350 150 R 50 50 1 1 P
+X VCC 8 -650 -250 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

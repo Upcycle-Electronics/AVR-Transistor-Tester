@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LCD-ST7565
+D Generic connector, single row, 01x10
+K connector
+F ~
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,54 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# NT7108
+#
+DEF NT7108 LCD 0 40 Y Y 1 F N
+F0 "LCD" -50 1150 50 H V C CNN
+F1 "NT7108" -100 -1250 50 H V C CNN
+F2 "" -600 0 50 H I C CNN
+F3 "" -600 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 50 -900 59 0 0 0 **K-Firmware Normal 0 C C
+T 0 50 -750 59 0 0 0 *8~Bit~Parallel~Only Normal 0 C C
+T 0 100 0 59 0 0 0 128x64pix Normal 0 C C
+T 0 100 300 59 0 0 0 "2.9''" Normal 0 C C
+T 0 100 -300 59 0 0 0 5v Normal 0 C C
+T 0 0 1000 47 0 0 0 Generic~Breakout~Module~Pinout Normal 0 C C
+T 0 100 -150 59 0 0 0 Graph~Mono Normal 0 C C
+T 0 50 550 157 0 0 0 NT7108 Normal 1 C C
+T 0 100 150 59 0 0 0 VA~62x44mm Normal 0 C C
+S -750 1050 650 -1100 1 1 10 N
+S -450 900 550 -1000 1 1 10 f
+X GND 1 -900 900 150 R 50 50 1 1 W
+X VCC 2 -900 800 150 R 50 50 1 1 W
+X VO 3 -900 700 150 R 50 50 1 1 W
+X RS 4 -900 600 150 R 50 50 1 1 I
+X R/W 5 -900 500 150 R 50 50 1 1 I
+X E 6 -900 400 150 R 50 50 1 1 I
+X DB0 7 -900 300 150 R 50 50 1 1 P
+X DB1 8 -900 200 150 R 50 50 1 1 I
+X DB2 9 -900 100 150 R 50 50 1 1 I
+X DB3 10 -900 0 150 R 50 50 1 1 I
+X LED- 20 -900 -1000 150 R 50 50 1 1 w
+X DB4 11 -900 -100 150 R 50 50 1 1 I
+X DB5 12 -900 -200 150 R 50 50 1 1 I
+X DB6 13 -900 -300 150 R 50 50 1 1 I
+X DB7 14 -900 -400 150 R 50 50 1 1 I
+X CS1 15 -900 -500 150 R 50 50 1 1 I
+X CS2 16 -900 -600 150 R 50 50 1 1 I
+X RST 17 -900 -700 150 R 50 50 1 1 I
+X VOUT 18 -900 -800 150 R 50 50 1 1 w
+X LED+ 19 -900 -900 150 R 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+#End Library

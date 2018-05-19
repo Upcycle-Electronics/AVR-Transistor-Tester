@@ -1,0 +1,41 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LCD-MOD-PCD8544
+#
+DEF LCD-MOD-PCD8544 LCD-M 0 40 Y Y 1 F N
+F0 "LCD-M" -150 650 50 H V C CNN
+F1 "LCD-MOD-PCD8544" -50 -550 50 H V C CNB
+F2 "" -300 0 50 H I C CNN
+F3 "" -300 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 50 -350 39 0 0 0 *M-Firmware~Only Normal 0 C C
+T 0 50 -200 39 0 0 0 3.3v Normal 0 C C
+T 0 50 100 39 0 0 0 45x84pix Normal 0 C C
+T 0 -50 450 31 0 0 0 Generic~Nokia~5110~Breakout~Module Normal 0 C C
+T 0 50 -100 39 0 0 0 Graph~Mono Normal 0 C C
+T 0 50 200 39 0 0 0 LCD~Model:~LPH7366 Normal 0 C C
+T 0 50 300 98 0 0 0 PCD8544 Normal 1 C C
+T 0 50 0 39 0 0 0 VA~36x26 Normal 0 C C
+S -300 400 400 -400 0 0 10 f
+S -550 500 450 -450 1 1 10 N
+X RST 1 -700 350 150 R 50 50 1 1 P
+X DC 2 -700 250 150 R 50 50 1 1 P
+X SCLK 3 -700 150 150 R 50 50 1 1 P
+X SDA 4 -700 50 150 R 50 50 1 1 P
+X LED+ 5 -700 -50 150 R 50 50 1 1 P
+X VDD 6 -700 -150 150 R 50 50 1 1 P
+X CE 7 -700 -250 150 R 50 50 1 1 P
+X GND 8 -700 -350 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

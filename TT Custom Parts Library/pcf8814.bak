@@ -1,0 +1,39 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# PCF8814
+#
+DEF PCF8814 LCD 0 40 Y Y 1 F N
+F0 "LCD" 100 650 50 H V C CNB
+F1 "PCF8814" 100 -600 50 H V C CNB
+F2 "" -260 30 50 H I C CNN
+F3 "" -260 30 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 250 -400 59 0 0 0 *K-Firmware Normal 0 C C
+T 0 300 -200 59 0 0 0 3.3v Normal 0 C C
+T 0 300 100 59 0 0 0 96x65pix Normal 0 C C
+T 0 300 -50 59 0 0 0 Graph~Mono Normal 0 C C
+T 0 150 500 47 0 0 0 Nokia~1100~Pin~Numbers Normal 0 C C
+T 0 300 300 79 0 0 0 PCF8814 Normal 1 C C
+S -350 550 650 -500 1 1 10 N
+S -50 450 600 -450 1 1 10 f
+X LED+ 1 -500 -50 150 R 50 50 1 1 I
+X VCC 2 -500 -150 150 R 50 50 1 1 I
+X VCC 3 -500 -250 150 R 50 50 1 1 I
+X SCLK 4 -500 150 150 R 50 50 1 1 I
+X MOSI 5 -500 50 150 R 50 50 1 1 I
+X GND 6 -500 -350 150 R 50 50 1 1 I
+X D/C 7 -500 250 150 R 50 50 1 1 I
+X RST 8 -500 350 150 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

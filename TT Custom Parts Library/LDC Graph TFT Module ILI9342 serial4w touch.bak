@@ -1,0 +1,61 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LCD-TFT-ER-TFTM023-1
+#
+DEF LCD-TFT-ER-TFTM023-1 LCD-M 0 40 Y Y 1 F N
+F0 "LCD-M" 0 1050 50 H V C CNB
+F1 "LCD-TFT-ER-TFTM023-1" 0 -1450 50 H V C CNB
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 300 250 79 0 0 0 "2.3''" Normal 0 C C
+T 0 250 -550 79 0 0 0 3.3v Normal 0 C C
+T 0 300 50 79 0 0 0 320x240pix Normal 0 C C
+T 0 300 -750 79 0 0 0 4~Wire~Serial Normal 0 C C
+T 0 50 900 39 0 0 0 40~Pin~Header~Breakout~Module~Serial~Configuration Normal 0 C C
+T 0 -650 -100 39 0 0 0 4w~Serial Normal 0 C C
+T 0 300 750 59 0 0 0 East~Rising Normal 1 C C
+T 0 300 500 197 0 0 0 ILI9342 Normal 1 C C
+T 0 -650 -150 31 0 0 0 Interface~Config Normal 0 C C
+T 0 100 -1300 39 0 0 0 MPN:~ER-TFTM023-1 Normal 0 C C
+T 0 -600 -750 31 0 0 0 Resistive~Touch Normal 0 C C
+T 0 250 -350 79 0 0 0 TFT~Color Normal 0 C C
+T 0 300 -150 79 0 0 0 VA~47x35mm Normal 0 C C
+T 0 300 -950 59 0 0 0 w/Resistive~Touch~Panel Normal 0 C C
+T 0 -650 -700 39 0 0 0 XPT2046 Normal 1 C C
+T 0 250 -1100 59 0 0 0 XPT2046 Normal 0 C C
+S -850 -50 -450 -600 0 0 10 N
+S -800 -650 -400 -1300 0 0 10 f
+S -350 850 900 -1250 0 0 10 f
+S -850 950 950 -1350 1 1 10 N
+X GND 1 -1000 100 150 R 50 50 1 1 P
+X VCC 2 -1000 200 150 R 50 50 1 1 P
+X RTP_SS 30 -1000 -1250 197 R 39 39 1 1 P
+X GND 40 -1000 0 150 R 50 50 1 1 P
+X RST 21 -1000 500 150 R 50 50 1 1 P
+X RTP_PEN 31 -1000 -1150 197 R 39 39 1 1 P
+X IM0 41 -1000 -250 150 R 50 50 1 1 P
+X AUX_MISO 32 -1000 -1050 197 R 39 39 1 1 P
+X IM1 42 -1000 -350 150 R 50 50 1 1 P
+X SS 23 -1000 400 150 R 50 50 1 1 P
+X AUX_SCLK 33 -1000 -950 197 R 39 39 1 1 P
+X IM2 43 -1000 -450 150 R 50 50 1 1 P
+X WR(SCLK) 24 -1000 700 150 R 50 50 1 1 P
+X AUX_MOSI 34 -1000 -850 197 R 39 39 1 1 P
+X IM3 44 -1000 -550 150 R 50 50 1 1 P
+X D/C 25 -1000 600 150 R 50 50 1 1 P
+X MOSI 27 -1000 800 150 R 50 50 1 1 P
+X LED(on/off) 29 -1000 300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

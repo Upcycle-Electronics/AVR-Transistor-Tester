@@ -1,0 +1,37 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LCD-TFT-1.8
+#
+DEF LCD-TFT-1.8 LCD-M 0 40 Y Y 1 F N
+F0 "LCD-M" 50 450 50 H V C CNN
+F1 "LCD-TFT-1.8" 50 -550 50 H V C CNB
+F2 "" 200 50 50 H I C CNN
+F3 "" 200 50 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+T 0 100 -350 39 0 0 0 (ST7735) Normal 0 C C
+T 0 100 100 39 0 0 0 1.8~TFT~Color~LCD Normal 0 C C
+T 0 100 200 47 0 0 0 AY-AT~Kit Normal 1 C C
+T 0 100 0 39 0 0 0 Module~Pinout Normal 0 C C
+S -350 350 -100 250 0 1 0 N
+S -350 350 400 -450 1 1 10 f
+X LED+ 1 -500 300 150 R 50 50 1 1 P
+X RST 2 -500 200 150 R 50 50 1 1 P
+X A0 3 -500 100 150 R 50 50 1 1 P
+X SDA 4 -500 0 150 R 50 50 1 1 P
+X SCLK 5 -500 -100 150 R 50 50 1 1 P
+X CS 6 -500 -200 150 R 50 50 1 1 P
+X VCC 7 -500 -300 150 R 50 50 1 1 P
+X GND 8 -500 -400 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
