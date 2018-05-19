@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BT-MOD
+D Generic connector, single row, 01x15
+K connector
+F ~
+$ENDCMP
+#
+#End Doc Library

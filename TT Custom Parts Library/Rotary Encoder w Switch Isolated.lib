@@ -1,0 +1,44 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Encoder+Switch
+#
+DEF Encoder+Switch RE 0 40 Y Y 1 F N
+F0 "RE" -250 50 50 H V C CNN
+F1 "Encoder+Switch" 350 0 50 V V C CNB
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+A 47 205 142 -1799 -1 1 1 16 N -95 205 190 205
+C -45 -235 18 1 1 16 F
+C 50 200 100 1 1 16 N
+C 150 -235 18 1 1 16 F
+S -345 450 430 -400 1 1 4 N
+S -150 -80 250 -390 1 1 16 f
+S -150 445 250 -5 1 1 16 f
+P 2 1 1 16 -145 -235 -45 -235 N
+P 2 1 1 16 -50 200 150 200 N
+P 2 1 1 16 -50 215 145 215 N
+P 2 1 1 16 250 -235 150 -235 N
+P 3 1 1 16 -110 200 -95 220 -80 200 N
+P 3 1 1 16 -45 -185 55 -185 155 -185 N
+P 3 1 1 16 175 200 190 220 205 200 N
+P 4 1 1 16 -50 185 145 185 140 185 145 185 N
+P 4 1 1 16 55 -185 55 -135 20 -135 90 -135 N
+X A 1 -50 600 150 D 50 50 1 1 P
+X C 2 50 600 150 D 50 50 1 1 P
+X B 3 150 600 150 D 50 50 1 1 P
+X S1 4 -50 -550 150 U 50 50 1 1 P
+X S2 5 150 -550 150 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

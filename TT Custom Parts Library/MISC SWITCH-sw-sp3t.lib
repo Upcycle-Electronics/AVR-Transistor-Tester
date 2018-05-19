@@ -1,0 +1,32 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# MISC-SW-SP3T
+#
+DEF MISC-SW-SP3T SW 0 40 Y N 1 F N
+F0 "SW" 1 290 50 H V C CNN
+F1 "MISC-SW-SP3T" 13 -226 50 H V C CNB
+F2 "" 300 -200 50 H I C CNN
+F3 "" 300 -200 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+C -85 -101 16 0 1 0 N
+C -85 -1 16 0 1 0 N
+C -85 100 16 0 1 0 N
+C 85 -1 16 0 1 0 N
+P 4 0 1 0 68 2 -69 90 -72 85 68 -4 N
+X Pin_1 1 -250 100 150 R 50 50 1 1 P
+X Pin_2 2 -250 0 150 R 50 50 1 1 P
+X Pin_3 3 -250 -100 150 R 50 50 1 1 P
+X Pin_4 4 250 0 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

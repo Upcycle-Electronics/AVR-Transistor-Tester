@@ -1,0 +1,35 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Conn_01x03
+#
+DEF Conn_01x03 J 0 40 Y N 1 F N
+F0 "J" 0 350 50 H V C CNN
+F1 "Conn_01x03" 0 -450 50 H V C CNN
+F2 "" -26 17 50 H I C CNN
+F3 "" -26 17 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -103 271 -2 91 1 1 10 N
+S -82 -35 35 -131 1 1 10 N
+S -77 151 -34 141 1 1 6 N
+S -73 229 -31 219 1 1 6 N
+S -50 -83 0 -93 1 1 6 N
+P 2 1 1 10 -53 218 -53 154 N
+P 4 1 1 10 -31 -86 -47 68 -45 68 -27 -86 N
+P 5 1 1 10 -84 -34 -101 92 0 92 34 -34 -83 -34 N
+P 5 1 1 10 32 -35 0 84 0 261 34 136 33 -36 f
+X Pin_1 1 -200 100 98 R 50 50 1 1 P
+X Pin_2 2 150 0 110 L 50 50 1 1 P
+X Pin_3 3 -200 -100 118 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

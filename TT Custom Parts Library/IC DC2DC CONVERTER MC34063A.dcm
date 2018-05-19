@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MC34063A
+D Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP packge numbering)
+K connector
+F ~
+$ENDCMP
+#
+#End Doc Library
