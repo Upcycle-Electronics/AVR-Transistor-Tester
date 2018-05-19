@@ -1,0 +1,35 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Q_NPN_General-RESCUE-Transistor_Tester
+#
+DEF Q_NPN_General-RESCUE-Transistor_Tester Q 0 0 N N 1 F N
+F0 "Q" -600 250 50 H V L CNN
+F1 "Q_NPN_General-RESCUE-Transistor_Tester" -600 150 50 H V L CNB
+F2 "" 50 94 50 H I C CNN
+F3 "" -36 -6 50 H I C CNN
+DRAW
+A 299 68 18 1705 90 0 0 2 N 281 71 318 71
+T 0 233 -20 20 0 0 0 2Nxxxx=EBC Normal 0 C C
+T 0 236 -50 20 0 0 0 2SC/D=ECB Normal 0 C C
+T 0 -100 -50 39 0 0 0 B Normal 0 C C
+T 0 241 10 20 0 0 0 BCxxx=CBE Normal 0 C C
+T 0 100 -100 39 0 0 0 C Normal 0 C C
+T 0 100 100 39 0 0 0 E Normal 0 C C
+S 136 96 334 -72 0 0 2 f
+P 2 0 0 2 284 50 277 34 N
+P 2 0 0 2 300 50 300 33 N
+P 2 0 0 2 315 51 320 34 N
+P 5 0 0 2 318 71 318 51 281 51 281 71 318 71 N
+C 14 -6 76 0 1 10 N
+P 2 0 1 0 -7 3 49 59 N
+P 3 0 1 20 -13 29 -13 -26 -13 -31 N
+P 4 0 1 0 -10 -2 48 -67 51 -72 55 -68 N
+P 5 0 1 0 11 -45 27 -29 43 -61 12 -46 11 -45 F
+X N N 50 -150 79 U 50 50 1 1 P
+X N N 50 150 83 D 50 50 1 1 P
+X P P -150 0 142 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
